@@ -13,4 +13,11 @@ body {
     font-style: normal;
     color: #333;
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(https://cdn.pixabay.com/photo/2022/02/11/18/09/coins-7007802_1280.jpg);
+    background-size: cover;
+    background-position: center;
 }

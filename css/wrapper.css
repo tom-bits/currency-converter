@@ -1,5 +1,9 @@
 .wrapper {
-    padding: 0 15px;
+    padding: 40px;
     max-width: 950px;
-    margin: 0 auto;
+    margin: 20px;
+    flex-basis: 700px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 30px black;
 }
