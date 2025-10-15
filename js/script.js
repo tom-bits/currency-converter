@@ -1,9 +1,4 @@
 {
-	const formElement = document.querySelector(".js-form");
-	const amountElement = document.querySelector(".js-amount");
-	const currencyElement = document.querySelector(".js-currency");
-	const resultElement = document.querySelector(".js-result");
-
 	const calculateResult = (amount, currency) => {
 		const rateEUR = 4.3319;
 		const rateGBP = 5.1929;
@@ -21,16 +16,26 @@
 		}
 	};
 
-	formElement.addEventListener("submit", (event) => {
-		event.preventDefault();
+	const init = () => {
+		const formElement = document.querySelector(".js-form");
 
-		const amount = +amountElement.value;
-		const currency = currencyElement.value;
+		formElement.addEventListener("submit", (event) => {
+			event.preventDefault();
 
-		const result = calculateResult(amount, currency);
+			const amountElement = document.querySelector(".js-amount");
+			const currencyElement = document.querySelector(".js-currency");
+			const resultElement = document.querySelector(".js-result");
 
-		resultElement.innerHTML = `${amount.toFixed(
-			2
-		)} PLN = <strong>${result.toFixed(2)} ${currency}</strong>`;
-	});
+			const amount = +amountElement.value;
+			const currency = currencyElement.value;
+
+			const result = calculateResult(amount, currency);
+
+			resultElement.innerHTML = `${amount.toFixed(
+				2
+			)} PLN = <strong>${result.toFixed(2)} ${currency}</strong>`;
+		});
+	};
+
+	init();
 }
